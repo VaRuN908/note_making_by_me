@@ -50,6 +50,7 @@
             margin-bottom: 2rem;
             background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
@@ -237,10 +238,10 @@
                 <div class="file-input-wrapper">
                     <span class="file-input-icon">📄</span>
                     <div class="file-input-text">
-                        <span id="file-name" style="font-weight: 600; color: #f8fafc;">Click to upload a text file</span><br>
-                        <small style="font-size: 0.9rem; margin-top: 8px; display: inline-block;">or drag and drop here</small>
+                        <span id="file-name" style="font-weight: 600; color: #f8fafc;">Click to upload a document</span><br>
+                        <small style="font-size: 0.9rem; margin-top: 8px; display: inline-block;">PDF, DOCX, CSV, or Text</small>
                     </div>
-                    <input type="file" name="file" id="file" required onchange="updateFileName(this)">
+                    <input type="file" name="file" id="file" accept=".pdf,.docx,.csv,.txt" required onchange="updateFileName(this)">
                 </div>
                 <button type="submit" class="btn-submit">Analyze Entities ✨</button>
             </form>
